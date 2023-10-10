@@ -644,18 +644,18 @@ Haskell allows the programmer to define new numeric types by implementing
 
 | Number Types | Imported From | Notes                         |
 |--------------|---------------|-------------------------------|
-| `Int`        | `Prelude`     | limited range machine integer |
-| `Integer`    | `Prelude`     | arbitrary precision integer   |
-| `Double, Float` | `Prelude` | double and single precision ieee754 floating point type |
-| `Rational` | `Data.Rational` | rational number type |
-| `Complex a` | `Data.Complex` | complex numbers with components of type `a` |
-| `Int8, Int16, Int32, Int64` | `Data.Int` | sized integers |
-| `Word8, Word16, Word32, Word64` | `Data.Word` | sized unsigned integers |
-| `Word` | `Data.Word` | the unsigned version of Int |
-| `Deci, Centi, Milli, Micro, Nano, Pico` | `Data.Fixed` | fixed point decimal |
-| `Natural` | `Data.Natural` | non-negative Integer |
-| `CInt,CUint,CDouble,CChar,CSize,...` | `Foreign.C.Types` | numeric types matching those in the platform's C environment, for FFI |
-| `Scientific` | `scientific` package | scientific notation number type |
+| `Int`        | `Prelude`     | Limited range machine integer |
+| `Integer`    | `Prelude`     | Arbitrary precision integer   |
+| `Double, Float` | `Prelude` | Double and single precision ieee754 floating point type |
+| `Rational` | `Data.Rational` | Rational number type |
+| `Complex a` | `Data.Complex` | Complex numbers with components of type `a` |
+| `Int8, Int16, Int32, Int64` | `Data.Int` | Sized integers |
+| `Word8, Word16, Word32, Word64` | `Data.Word` | Sized unsigned integers |
+| `Word` | `Data.Word` | the unsigned version of `Int` |
+| `Deci, Centi, Milli, Micro, Nano, Pico` | `Data.Fixed` | Fixed point decimal |
+| `Natural` | `Data.Natural` | Non-negative Integer |
+| `CInt,CUint,CDouble,CChar,CSize,...` | `Foreign.C.Types` | Numeric types matching those in the platform's C environment, for FFI |
+| `Scientific` | `scientific` package | Scientific notation number type |
 
 ## Modules
 
