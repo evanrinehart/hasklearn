@@ -445,10 +445,10 @@ data Pair a b = MkPair a b
 The example definitions of `Bool` and `Maybe` are the actual definitions used by
 the base library.
 
-The `Pair` example defines a pair type equivalent to `(a,b)` but without any
-syntactic sugar for the constructor. In actual ADT definitions, constructors
-must begin with a capital letter or be an infix operator starting with `:`
-(colon).
+The `Pair a b` example defines a pair type equivalent to `(a,b)` but without
+any syntactic sugar for the constructor. In actual ADT definitions,
+constructors must begin with a capital letter or be an infix operator starting
+with `:` (colon).
 
 This is a sugarless definition of a type equivalent to list, demonstrating a
 recursive data type.
