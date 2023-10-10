@@ -37,17 +37,17 @@ to a definition or case alternative.
 ```haskell
 -- where clause desugars to let
 mixed2 = (n,b,c) where
-    n = ord 'A'
-    b = n < 128
-    c = chr (n + 32)
+  n = ord 'A'
+  b = n < 128
+  c = chr (n + 32)
 
 -- subdefinitions can have their own nested where clause
 mixed2 = (n,b,c) where
-    n = x + y where
-        x = 13
-        y = 7
-    b = n > 10
-    c = chr n
+  n = x + y where
+    x = 13
+    y = 7
+  b = n > 10
+  c = chr n
 ```
 
 `where` is syntactic sugar which gets translated to an equivalent `let` in the
