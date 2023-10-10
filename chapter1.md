@@ -9,7 +9,7 @@ version = (13, 37)
 -- nines evaluates to the nested list [[9,9,9],[9,9,9],[9,9,9]], explicit type signature
 nines :: [[Int]]
 nines =
-  let x = [9,9,9] in [x,x,x]
+    let x = [9,9,9] in [x,x,x]
 ```
 
 Variable names must start with a lowercase letter.
@@ -22,10 +22,10 @@ import Data.Char (ord, chr)
 -- mixed is a triple of values (65, True, 'a')
 mixed :: (Int, Bool, Char)
 mixed =
-  let n = ord 'A'
-	  b = n < 128
-      c = chr (n + 32)
-  in (n,b,c)
+    let n = ord 'A'
+        b = n < 128
+        c = chr (n + 32)
+    in (n,b,c)
 ```
 
 Variable bindings in Haskell are referentially transparent. In other words a variable can be
@@ -37,17 +37,17 @@ to a definition or case alternative.
 ```haskell
 -- where clause desugars to let
 mixed2 = (n,b,c) where
-  n = ord 'A'
-  b = n < 128
-  c = chr (n + 32)
+    n = ord 'A'
+    b = n < 128
+    c = chr (n + 32)
 
 -- subdefinitions can have their own nested where clause
 mixed2 = (n,b,c) where
-  n = x + y where
-	x = 13
-	y = 7
-  b = n > 10
-  c = chr n
+    n = x + y where
+        x = 13
+        y = 7
+    b = n > 10
+    c = chr n
 ```
 
 `where` is syntactic sugar which gets translated to an equivalent `let` in the
@@ -118,14 +118,14 @@ example
 
 -- equivalent longer version using nested if-then-else
 example =
-	if 7 < 3
-		then 'A'
-		else if isUpper 'Z'
-			then 'B'
-			else
-				if otherwise
-					then 'C'
-					else error "Non-exhaustive patterns in definition of example"
+    if 7 < 3
+        then 'A'
+        else if isUpper 'Z'
+            then 'B'
+            else
+                if otherwise
+                    then 'C'
+                    else error "Non-exhaustive patterns in definition of example"
 ```
 
 The variable `otherwise` is defined as `True` in the Prelude for use as a final catch-all.
@@ -202,18 +202,18 @@ library functions can be used to iterate in the desired way and execute the acti
 ```haskell
 -- a loop which does I/O and stops on a certain condition
 main = do
-	c <- getChar
-	if c < 'A'
-		then do
-			putStrLn "char too low try again"
-			main
-		else do
-			putStrLn "char high enough"
+    c <- getChar
+    if c < 'A'
+        then do
+            putStrLn "char too low try again"
+            main
+        else do
+            putStrLn "char high enough"
 
 -- helper functions can be defined and used to handle patterns of recursion
 main = do
-	for ["Hello", "World", "!"] putStrLn 
-	return ()
+    for ["Hello", "World", "!"] putStrLn
+    return ()
 ```
 
 `do` notation adds no additional expressive power to the language and has a
