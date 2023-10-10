@@ -524,7 +524,7 @@ data Employee = MkEmployee { name :: String, section :: Char, salary :: Int }
 alice :: Employee
 alice = MkEmployee { name = "Alice", section = 'K', salary = 50000 }
 betty = MkEmployee { name = "Betty", section = 'T', salary = 210000 }
-chuck = MkEmployee "Chunk" 'K' 50000 -- without fields, acts like constructor as usual
+chuck = MkEmployee "Chuck" 'K' 50000 -- without fields, acts like constructor as usual
 ```
 
 The field names automatically generate field selector functions for the type. Note
