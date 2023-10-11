@@ -90,7 +90,8 @@ defined in `Data.Foldable` but is automatically imported as part of the
 standard Prelude.
 
 ```haskell
-n = length msg -- n would evaluate to 5
+-- n would evaluate to 5
+n = length msg
 ```
 
 List and tuple have special constructor syntax. But they are otherwise
@@ -101,6 +102,7 @@ ordinary algebraic data types. Detailed later.
 Haskell has no statements, much less if statements. But there is an if-then-else expression. E.g.
 
 ```haskell
+-- n defined using if-then-else has value 37
 mixed :: (Int, Bool, Char)
 mixed =
   let n = if b then 13 else 37
@@ -116,7 +118,7 @@ Guard syntax allows more convenient definitions which would traditionally use a 
 nested if-then-else.
 
 ```haskell
--- example is a constant equal to 'B'
+-- guard syntax tests several bools in sequence. example is a constant equal to 'B'
 example
   | 7 < 3       = 'A'
   | isUpper 'Z' = 'B'
@@ -145,7 +147,7 @@ equation you get a function definition.
 -- neighborhood is a function taking a number and constructing a triple based on it
 neighborhood n = (n - 1, n, n + 1)
 
--- example defined by using a function, has value (6,7,8)
+-- example defined by applying the defined function, has value (6,7,8)
 example = neighborhood 7
 ```
 
@@ -153,6 +155,7 @@ It's usually best to put an explicit type signature for top level definitions.
 Type checker messages will greatly improve.
 
 ```haskell
+-- neighborhood has type function from Int to triple of Ints
 neighborhood :: Int -> (Int,Int,Int)
 neighborhood n = (n - 1, n, n + 1)
 ```
