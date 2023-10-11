@@ -62,6 +62,12 @@ matter.
 Vectors are appropriate for some problems but very often you will want a list
 instead.
 
+## Lists
+
+A list is either the empty list or a chain of elements terminated by the empty
+list.  The empty list is constructed with the special syntax `[]` and elements
+are prepended using the `:` operator.
+
 ```haskell
 -- zilch is an empty list
 zilch = []
